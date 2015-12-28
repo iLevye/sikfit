@@ -64,14 +64,14 @@ app.controller('HomeController', function(feed, $scope){
 app.factory('feed', ['$http', function($http) {
 	return {
 		get_today_feed : function(){
-			return $http.get("http://localhost/sikfit_api/feed/get").success(function(data){
+			return $http.get("http://sikfit.com/api/feed/get").success(function(data){
 					return data;
 				}).error(function(err){
 					return err;
 				});
 		},
 		get_date_feed : function(page){
-			return $http.get("http://localhost/sikfit_api/feed/get?old_day=" + page).success(function(data){
+			return $http.get("http://sikfit.com/api/feed/get?old_day=" + page).success(function(data){
 				return data;
 			}).error(function(err){
 				return err;
