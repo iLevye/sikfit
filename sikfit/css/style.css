@@ -1,0 +1,228 @@
+html, body {
+	background-color: #333;
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
+}
+
+*:not(i) {
+	font-family: 'Roboto', sans-serif !important;
+}
+
+/* main-menu */
+
+.main-menu {
+	height: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/* dizi takvim */
+
+.dizi-takvim {
+	padding-bottom: 30px;
+}
+
+.dizi-day {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.dizi-day:hover > .week-date {
+	border-color: white;
+}
+
+.week-title {
+	float: left;
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
+	margin-top: 5px;
+	line-height: 22px;
+	color: gray;
+}
+
+.week-date {
+	float: left;
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid gray;
+	font-size: 11px;
+	color: gray;
+	margin-bottom: 10px; 
+	padding-bottom: 3px;
+}
+
+.active-day {
+	background-color: #484848;
+	color: #333;
+}
+
+.active-day .week-title {
+	color: white;
+}
+
+.active-day .week-date {
+	color: white;
+	border-color: lightgray; 
+}
+
+.active-day .dizi-box {
+	border-color:  #383737; 
+}
+
+.dizi-box {
+	display: inline-block;
+	margin: auto;
+	width: 90%;
+	cursor: pointer;
+	border-radius: 6px;
+	margin-top: 10px;
+}
+
+.dizi-box:hover {
+	border-color: white;
+}
+
+	.dizi-box:hover > .dizi-box-name, .dizi-box:hover > .dizi-box-episode {
+		color: white;
+		background-color: black;
+	}
+
+.dizi-box-img {
+	float: left;
+	width: 100%;
+	height: 75px;
+	background-size: cover !important;
+	background-position: center center; 
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+.dizi-box-name {
+	float: left;
+	width: 100%;
+	text-align: center;
+	font-size: 13px;
+	padding-top: 5px;
+	color: #333;
+	background-color: whiteSmoke;
+}
+
+.dizi-box-episode {
+	float: left;
+	width: 100%;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 11px;
+	color: #333;
+	background-color: whiteSmoke;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+
+/* sidebar */
+
+.sidebar {
+	height: 600px;
+    text-align: center;
+    width: 100%;
+    background-color: #383737;
+}
+
+.center {
+	text-align: center;
+}
+
+.sidebar-dizi-box {
+	float: left;
+	width: 100%;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+	height: 70px;
+}
+
+	.sidebar-dizi-box:hover {
+		border-color: white;
+	}
+
+.sidebar-img {
+	float: left;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	margin: 10px;
+	background-size: cover;
+	background-position: center center;
+}
+
+.row {
+	float: left;
+	width: 100%;
+}
+
+.dizi-takvim-buttons {
+	float: left;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.day-arrow {
+	line-height: 300px;
+	height: 600px;
+	color: gray;
+	float: left;
+	width: 100%;
+	text-align: center;
+	margin-top: 44px;
+	cursor: pointer;
+	background: none;
+	border: 0;
+	font-size: 22px;
+}
+
+.day-arrow:hover {
+	background-color: black;
+	color: white;
+}
+
+.day-arrow:focus{
+	outline: 0;
+} 
+
+.day-arrow:active {
+	background: #292929
+}
+
+
+
+/* mobile */
+
+@media handheld, only screen and (max-width: 767px) {
+
+	/* dizi-takvimi */
+
+	.week-title {
+		font-size: 24px;
+		line-height: 40px;
+	}
+
+	.dizi-day {
+	}
+
+	.dizi-box-name {
+		font-size: 24px;
+	}
+
+	.dizi-box-episode {
+		font-size: 20px;
+	}
+
+	.dizi-box-img {
+		height: 240px;
+	}
+
+}

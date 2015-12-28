@@ -1,0 +1,41 @@
+<div class="grid">
+	<div class="col-9-12 dizi-takvim">
+		<div class="grid hide-on-mobile">
+			<div class="col-bucuk-12 dizi-day hide-on-mobile" ng-click="go_old_day()">
+				<button class="day-arrow"><</button>
+			</div>
+			<div class="col-11-12">
+				<div class="col-1-5 dizi-day mobile-col-1-1 {{day.active}}" ng-repeat="day in feed.list">
+					<span class="week-title">{{day.title}}</span>
+					<span class="week-date">{{day.tr_date}}</span>
+					<widget1 item="f" ng-repeat="f in day.episodes"></widget1>
+				</div>
+			</div>
+			<div class="col-bucuk-12 dizi-day hide-on-mobile" ng-click="go_new_day()" ng-show="old_day">
+				<button class="day-arrow">></button>
+			</div>
+		</div>
+		<div class="grid show-on-mobile">
+			<div class="col-11-12">
+				<div class="col-1-5 dizi-day mobile-col-1-1 {{day.active}}" ng-repeat="day in mobil_feed.list">
+					<span class="week-title">{{day.title}}</span>
+					<span class="week-date">{{day.tr_date}}</span>
+					<widget1 item="f" ng-repeat="f in day.episodes"></widget1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-3-12 center hide-on-mobile">
+		<div class="col-1-12">
+
+		</div>	
+		<div class="col-11-12">
+			<div class="sidebar">
+				<div class="sidebar-dizi-box">
+					<div class="sidebar-img" style="background: url(http://localhost/sikfit_api/images/1.png)"></div>
+					<span class="sidebar-name">Once Upon A Time</span>
+				</div>
+			</div>				
+		</div>
+	</div>
+</div>
